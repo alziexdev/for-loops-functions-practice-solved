@@ -6,7 +6,15 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+  const withdrawals = [];
+  for (var i = 0; i < array.length; i++) {
+    if(!array[i].withdrawals == undefined) {
+      withdrawals.push(array[i].withdrawals);
+    } else {
+      withdrawals.push(0);
+  }
+  }
+  return withdrawals;
 }
 
 // === TEST YOURSELF ===
