@@ -8,7 +8,7 @@ export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
   let leastMoney = [];
   let min = Infinity;
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if(array[i].balance < min && array[i].balance > 0) {
     leastMoney.push(array[i]);
   } else {

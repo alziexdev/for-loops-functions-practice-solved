@@ -7,9 +7,15 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-
-}
-
+  let letterIncluded = false;
+  for (let i = 0; i < array.length; i++) {
+    const letter = array[i];
+    if (value == letter) {
+    letterIncluded = true;
+  }
+  }
+  return letterIncluded;
+    }
 
 
 // === TEST YOURSELF ===

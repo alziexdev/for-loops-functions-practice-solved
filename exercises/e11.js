@@ -7,11 +7,16 @@
 export function getAllWithdrawals(array) {
   // Your code goes here...
   const withdrawals = [];
-  for (var i = 0; i < array.length; i++) {
-    if(!array[i].withdrawals == undefined) {
-      withdrawals.push(array[i].withdrawals);
+  let withdrawalSum = 0;
+  for (let i = 0; i < array.length; i++) {
+    if(array[i].withdrawals == undefined) {
+      withdrawals.push(withdrawalSum);
     } else {
-      withdrawals.push(0);
+      for (const individualWithdrawal of array[i].withdrawals) {
+      withdrawalSum += individualWithdrawal;
+    }
+      withdrawals.push(withdrawalSum);
+      withdrawalSum = 0;
   }
   }
   return withdrawals;

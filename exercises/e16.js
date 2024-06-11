@@ -7,7 +7,13 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  let array3 = [];
+  for (let i = 0; i < array.length; i++) {
+    for (const arrayItem of array[i]) {
+    array3.push(arrayItem);
+  }
+  }
+  return array3;
 }
 
 
