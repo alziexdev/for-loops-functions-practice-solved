@@ -7,10 +7,20 @@ export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
   const specificClientNames = [];
   for (let i = 0; i < array.length; i++) {
-    if(array[i].name.includes(letter) || array[i].name.includes(letter.toUpperCase)) {
+    let accountHolder = array[i].name;
+    for (let a of accountHolder) {
+      let letterIncluded = false;
+      if(a == letter) {
+        letterIncluded = true;
+      } 
+      else if(a == letter.toUpperCase()) {
+        letterIncluded = true;
+      }
+    if(letterIncluded) {
       specificClientNames.push(array[i].name);
     }
   }
+}
   return specificClientNames;
 }
 
